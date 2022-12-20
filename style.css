@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #0a3871;
+  background: rgb(195, 233, 228);
+  overflow: hidden;
+}
+
+section.section {
+  padding: 60px 0;
+  height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.row {
+  overflow: hidden;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+}
+
+.main label {
+  height: 100%;
+  width: 100%;
+}
+
+.output {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 40px 10px;
+  align-items: center;
+  background: rgb(255 255 255 / 60%);
+  min-width: 30%;
+}
+
+.outputText {
+  flex: 1;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 0%);
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+textarea::placeholder {
+  font-size: 1.2rem;
+}
+
+.hint {
+  margin: 6px;
+}
+
+.controls {
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 16px;
+  width: 180px;
+  margin: 0 8px;
+  color: #0a3871;
+  font-weight: 600;
+}
+
+.output {
+}
