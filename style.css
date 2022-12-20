@@ -78,9 +78,6 @@ textarea::placeholder {
   margin: 6px;
 }
 
-.controls {
-}
-
 button {
   padding: 10px 20px;
   border-radius: 16px;
@@ -90,5 +87,16 @@ button {
   font-weight: 600;
 }
 
-.output {
+@media screen and (max-width: 800px) {
+
+  .controls {
+    display: flex;
+  }
+  .output {
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
 }
