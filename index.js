@@ -1,5 +1,3 @@
-import './style.css';
-
 const App = {
   //Acesso ao DOM
   input: document.getElementById('mainText'),
