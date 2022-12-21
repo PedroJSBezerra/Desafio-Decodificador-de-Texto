@@ -24,11 +24,10 @@ const App = {
   //funcao decript
   decript(text) {
     //Inverte o objeto App.keys Ex: {a:"ai"} => {ai:"a"}
-    const flip = (data) => {
+    const flip = (data) =>
       Object.fromEntries(
         Object.entries(data).map(([key, value]) => [value, key])
       );
-    };
 
     var chars = flip(App.keys);
 

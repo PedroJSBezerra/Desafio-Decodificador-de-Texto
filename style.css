@@ -120,7 +120,13 @@ button:hover {
 @media screen and (max-width: 800px) {
   .controls {
     display: flex;
+    flex-direction: column;
   }
+
+  .controls button {
+    margin: 6px 0;
+  }
+
   .output {
   }
 
