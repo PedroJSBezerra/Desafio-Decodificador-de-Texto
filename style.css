@@ -1,3 +1,9 @@
+:root {
+  --color-text: #0a3871;
+  --color-bg: rgb(216, 230, 228);
+  --color-btn-hover: rgb(102, 218, 198);
+}
+
 *,
 *::before,
 *::after {
@@ -8,9 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-  color: #0a3871;
-  background: rgb(195, 233, 228);
-  overflow: hidden;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 section.section {
@@ -25,7 +30,6 @@ section.section {
 }
 
 .row {
-  overflow: hidden;
   height: 100%;
   padding: 10px;
   display: flex;
@@ -68,10 +72,13 @@ textarea {
   resize: none;
   border: none;
   outline: none;
+  color: var(--color-text);
 }
 
 textarea::placeholder {
   font-size: 1.2rem;
+  opacity: 0.25;
+  color: var(--color-text);
 }
 
 .hint {
@@ -83,12 +90,34 @@ button {
   border-radius: 16px;
   width: 180px;
   margin: 0 8px;
-  color: #0a3871;
+  color: var(--color-text);
   font-weight: 600;
 }
 
-@media screen and (max-width: 800px) {
+button:hover {
+  background: var(--color-btn-hover);
+  cursor: pointer;
+}
 
+.copy.show.check {
+  color: white;
+  border: 2px solid white;
+  background: green;
+}
+
+.copy {
+  display: none;
+}
+
+.copy.show {
+  display: block;
+}
+
+.output {
+  color: var(--color-text);
+}
+
+@media screen and (max-width: 800px) {
   .controls {
     display: flex;
   }
@@ -98,5 +127,4 @@ button {
   .row {
     flex-direction: column;
   }
-
 }
