@@ -81,6 +81,7 @@ const App = {
 
     App.btnCopy.addEventListener('click', () => {
       App.copy(App.output.innerHTML);
+      App.input.value = ""
     });
   },
 };
