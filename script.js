@@ -37,12 +37,6 @@ const App = {
     );
   },
 
-  showCopy() {
-    App.output.innerHTML != ''
-      ? App.btnCopy.classList.add('show')
-      : App.btnCopy.classList.remove('show');
-  },
-
   //funcao copiar
   copy(text) {
     try {
@@ -56,19 +50,33 @@ const App = {
     }
   },
 
+  //alterna o botão copiar
+  copyToggle() {
+    App.output.innerHTML != ''
+      ? App.btnCopy.classList.add('show')
+      : App.btnCopy.classList.remove('show');
+    App.btnCopy.classList.remove('check');
+    App.btnCopy.childNodes[1].classList.remove('bi-clipboard-check');
+    App.btnCopy.childNodes[1].classList.add('bi-clipboard');
+    App.btnCopy.childNodes[3].innerText = 'Copiar';
+  },
+
   //Inicializa
   init() {
     //Adiciona os listeners (ouvintes) aos botôes
-    App.showCopy();
+
+    App.input.addEventListener('keyup', () => {
+      App.btnCopy.classList.remove('show');
+    });
 
     App.btnEncript.addEventListener('click', () => {
       App.encript(App.input.value);
-      App.showCopy();
+      App.copyToggle();
     });
 
     App.btnDecript.addEventListener('click', () => {
       App.decript(App.input.value);
-      App.showCopy();
+      App.copyToggle();
     });
 
     App.btnCopy.addEventListener('click', () => {
