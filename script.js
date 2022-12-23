@@ -28,9 +28,7 @@ const App = {
       Object.fromEntries(
         Object.entries(data).map(([key, value]) => [value, key])
       );
-
     var chars = flip(App.keys);
-
     App.output.innerHTML = text.replace(
       /(ai|enter|imes|ober|ufat)/g,
       (m) => chars[m]
@@ -64,7 +62,6 @@ const App = {
   //Inicializa
   init() {
     //Adiciona os listeners (ouvintes) aos botôes
-
     App.input.addEventListener('keyup', () => {
       App.btnCopy.classList.remove('show');
     });
@@ -81,7 +78,7 @@ const App = {
 
     App.btnCopy.addEventListener('click', () => {
       App.copy(App.output.innerHTML);
-      App.input.value = ""
+      App.input.value = '';
     });
   },
 };
